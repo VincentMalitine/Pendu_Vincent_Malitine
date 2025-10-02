@@ -6,7 +6,24 @@
         xmlns:local="clr-namespace:Pendu_Vincent_Malitine"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
 
+       <!--test comment-->
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBox Grid.Column="0" Grid.Row="0" Text="TextBox" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+        
     </Grid>
+    
 </Window>

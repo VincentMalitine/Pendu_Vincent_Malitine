@@ -19,6 +19,7 @@ namespace Pendu_Vincent_Malitine
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }
