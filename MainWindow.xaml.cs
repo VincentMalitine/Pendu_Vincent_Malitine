@@ -16,9 +16,24 @@ namespace Pendu_Vincent_Malitine
     /// </summary>
     public partial class MainWindow : Window
     {
+        char TextBox_Result = ' ';
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Letter_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button btn && btn.Content is string content && content.Length == 1)
+            {
+                TextBox_Result = content[0];
+                ResultTextBox.Text = TextBox_Result.ToString();
+            }
+        }
+
+        private void Button_Done_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
