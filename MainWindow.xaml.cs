@@ -11,10 +11,16 @@ using System.Windows.Shapes;
 
 namespace Pendu_Vincent_Malitine
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+
+    string mot =" "; // Le mot à deviner
+    string[5] list-mots = {"tuile", "bananaleclerc", "prototype", "nurburgring", "nordschleiffe"}; // Liste de mots possibles
+    int vie = 6; // Nombre d'essais restants
+    string lettresDevinees = ""; // Lettres déjà devinées
+    bool jeuTermine = false; // Indique si le jeu est terminé
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
     {
         char TextBox_Result = ' ';
 
