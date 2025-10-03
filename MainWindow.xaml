@@ -7,9 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
+    <!-- Définition de la Grid -->
     <Grid>
-
-       <!--test comment-->
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -22,8 +21,59 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         
+        <!-- TextBox occupant toute la ligne du haut et les trois colonnes -->
         <TextBox Grid.Column="0" Grid.Row="0" Text="TextBox" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+
+        <!-- Grid définissant les étages du clavier virtuel -->
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Boutons du clavier virtuel -->
+            <Button Grid.Row="0" Grid.Column="0" Content="A" Margin="2"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="B" Margin="2"/>
+            <Button Grid.Row="0" Grid.Column="2" Content="C" Margin="2"/>
+            <Button Grid.Row="0" Grid.Column="3" Content="D" Margin="2"/>
+            <Button Grid.Row="0" Grid.Column="4" Content="E" Margin="2"/>
+            <Button Grid.Row="1" Grid.Column="0" Content="F" Margin="2"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="G" Margin="2"/>
+            <Button Grid.Row="1" Grid.Column="2" Content="H" Margin="2"/>
+            <Button Grid.Row="1" Grid.Column="3" Content="I" Margin="2"/>
+            <Button Grid.Row="1" Grid.Column="4" Content="J" Margin="2"/>
+            <Button Grid.Row="2" Grid.Column="0" Content="K" Margin="2"/>
+            <Button Grid.Row="2" Grid.Column="1" Content="L" Margin="2"/>
+            <Button Grid.Row="2" Grid.Column="2" Content="M" Margin="2"/>
+            <Button Grid.Row="2" Grid.Column="3" Content="N" Margin="2"/>
+            <Button Grid.Row="2" Grid.Column="4" Content="O" Margin="2"/>
+            <Button Grid.Row="3" Grid.Column="0" Content="P" Margin="2"/>
+            <Button Grid.Row="3" Grid.Column="1" Content="Q" Margin="2"/>
+            <Button Grid.Row="3" Grid.Column="2" Content="R" Margin="2"/>
+            <Button Grid.Row="3" Grid.Column="3" Content="S" Margin="2"/>
+            <Button Grid.Row="3" Grid.Column="4" Content="T" Margin="2"/>
+            <Button Grid.Row="4" Grid.Column="0" Content="U" Margin="2"/>
+            <Button Grid.Row="4" Grid.Column="1" Content="V" Margin="2"/>
+            <Button Grid.Row="4" Grid.Column="2" Content="W" Margin="2"/>
+            <Button Grid.Row="4" Grid.Column="3" Content="X" Margin="2"/>
+            <Button Grid.Row="4" Grid.Column="4" Content="Y" Margin="2"/>
+            <Button Grid.Row="5" Grid.Column="0" Content="Z" Margin="2"/>
+
+        </Grid>
         
     </Grid>
     
 </Window>
+
