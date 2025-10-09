@@ -11,18 +11,20 @@ using System.Windows.Shapes;
 
 namespace Pendu_Vincent_Malitine
 {
-
-    string mot =" "; // Le mot à deviner
-    string[5] list-mots = {"tuile", "bananaleclerc", "prototype", "nurburgring", "nordschleiffe"}; // Liste de mots possibles
-    int vie = 6; // Nombre d'essais restants
-    string lettresDevinees = ""; // Lettres déjà devinées
-    bool jeuTermine = false; // Indique si le jeu est terminé
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : Window
     {
+        string mot = " "; // Le mot à deviner
+        string[] listmots = { "tuile", "bananaleclerc", "prototype", "nurburgring", "nordschleiffe" }; // Liste de mots possibles
+        int vie = 6; // Nombre d'essais restants
+        string lettresDevinees = ""; // Lettres déjà devinées
+        bool jeuTermine = false; // Indique si le jeu est terminé
         char TextBox_Result = ' ';
+        char tentative = ' ';
+
+        
 
         public MainWindow()
         {
@@ -40,7 +42,28 @@ public partial class MainWindow : Window
 
         private void Button_Done_Click(object sender, RoutedEventArgs e)
         {
-
+            tentative = TextBox_Result;
+            TextBox_Result = ' ';
+            if (mot.Contains(tentative))
+            {
+                lettresDevinees += tentative;
+                UpdateDisplayedWord();
+                if (IsWordGuessed())
+                {
+                    MessageBox.Show("Félicitations ! Vous avez deviné le mot : " + mot);
+                    jeuTermine = true;
+                }
+            }
+            else
+            {
+                vie--;
+                VieTextBlock.Text = "Vies restantes : " + vie;
+                if (vie <= 0)
+                {
+                    MessageBox.Show("Game Over ! Le mot était : " + mot);
+                    jeuTermine = true;
+                }
+            }
         }
     }
 }
